@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Tubes</string>
+    
+    <string-array name="item_titles">
+        <item>Health Articles are Beneficial to Read","Health Articles are Beneficial to Read</item>
+        <item>Health Articles are Beneficial to Read","Health Articles are Beneficial to Read</item>
+        <item>Health Articles are Beneficial to Read","Health Articles are Beneficial to Read</item>
+        <item>Health Articles are Beneficial to Read","Health Articles are Beneficial to Read</item>
+        <item>Health Articles are Beneficial to Read","Health Articles are Beneficial to Read</item>
+        <item>Health Articles are Beneficial to Read","Health Articles are Beneficial to Read</item>
+        <item>Health Articles are Beneficial to Read","Health Articles are Beneficial to Read</item>
+        <item>Health Articles are Beneficial to Read","Health Articles are Beneficial to Read</item>
+        <item>Health Articles are Beneficial to Read","Health Articles are Beneficial to Read</item>
+        <item>Health Articles are Beneficial to Read","Health Articles are Beneficial to Read</item>
+        <item>Health Articles are Beneficial to Read","Health Articles are Beneficial to Read</item>
+        <item>Health Articles are Beneficial to Read","Health Articles are Beneficial to Read</item>
+        <item>Health Articles are Beneficial to Read","Health Articles are Beneficial to Read</item>
+        <item>Health Articles are Beneficial to Read","Health Articles are Beneficial to Read</item>
+    </string-array>
+
+    <string-array name="item_details">
+        <item>Health articles are beneficial for humans like us to read because it develops our brain to extend our knowledge.</item>
+        <item>Health articles are beneficial for humans like us to read because it develops our brain to extend our knowledge.</item>
+        <item>Health articles are beneficial for humans like us to read because it develops our brain to extend our knowledge.</item>
+        <item>Health articles are beneficial for humans like us to read because it develops our brain to extend our knowledge.</item>
+        <item>Health articles are beneficial for humans like us to read because it develops our brain to extend our knowledge.</item>
+        <item>Health articles are beneficial for humans like us to read because it develops our brain to extend our knowledge.</item>
+        <item>Health articles are beneficial for humans like us to read because it develops our brain to extend our knowledge.</item>
+        <item>Health articles are beneficial for humans like us to read because it develops our brain to extend our knowledge.</item>
+        <item>Health articles are beneficial for humans like us to read because it develops our brain to extend our knowledge.</item>
+        <item>Health articles are beneficial for humans like us to read because it develops our brain to extend our knowledge.</item>
+        <item>Health articles are beneficial for humans like us to read because it develops our brain to extend our knowledge.</item>
+        <item>Health articles are beneficial for humans like us to read because it develops our brain to extend our knowledge.</item>
+        <item>Health articles are beneficial for humans like us to read because it develops our brain to extend our knowledge.</item>
+        <item>Health articles are beneficial for humans like us to read because it develops our brain to extend our knowledge.</item>
+
+    </string-array>
+
+    <string-array name="item_images">
+        <item>@drawable/tomatohealth</item>
+        <item>@drawable/tomatohealth</item>
+        <item>@drawable/tomatohealth</item>
+        <item>@drawable/tomatohealth</item>
+        <item>@drawable/tomatohealth</item>
+        <item>@drawable/tomatohealth</item>
+        <item>@drawable/tomatohealth</item>
+        <item>@drawable/tomatohealth</item>
+        <item>@drawable/tomatohealth</item>
+        <item>@drawable/tomatohealth</item>
+        <item>@drawable/tomatohealth</item>
+        <item>@drawable/tomatohealth</item>
+        <item>@drawable/tomatohealth</item>
+        <item>@drawable/tomatohealth</item>
+
+    </string-array>
+
+</resources>
