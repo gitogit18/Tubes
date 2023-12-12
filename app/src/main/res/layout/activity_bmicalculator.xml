@@ -1,11 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
     tools:context=".ui.bmicalculator.BMICalculatorActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Masukan Tinggi Badan"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:id="@+id/edt_tinggi_badan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:autofillHints="Masukan Tinggi Badan Anda"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="14sp"
+        android:text="Masukan Berat Badan"/>
+
+    <EditText
+        android:id="@+id/edt_berat_badan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:autofillHints="Masukan Tinggi Badan Anda"
+        />
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="16sp"
+        android:text="Calculate"
+        android:backgroundTint="@color/darkgreen"/>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="14sp"
+        tools:text="Result : BMI Underweight 180"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -3,29 +3,43 @@ package com.example.tubes.ui.bmicalculator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.tubes.R
+import com.example.tubes.databinding.ActivityBmicalculatorBinding
 
 class BMICalculatorActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityBmicalculatorBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bmicalculator)
-    }
-    /*private fun calculateBMI(){
-        val weight = binding.weightEdit.text.toString().toFloatOrNull()
-        val height = binding.heightEdit.text.toString().toFloatOrNull()
+        binding = ActivityBmicalculatorBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        if (weight != null && height != null){
-            val bmi = weight/(height/100).pow(2)
-            val bmiResult = String.format("%.2f", bmi)
 
-            val bmiCategory = when {
-                bmi < 18.5 -> "Underweight"
-                bmi < 25 -> "Normal weight"
-                bmi < 30 -> "Overweight"
-                else -> "Obese"
+
+        binding.apply {
+
+            var sts: String
+            btnCalculate.setOnClickListener {
+                val beratBadan = edtBeratBadan.text.toString().trim()
+                val tinggiBadan = edtTinggiBadan.text.toString().trim()
+                val tinggi = tinggiBadan.toDouble() / 100
+                val calculate = beratBadan.toDouble() / (tinggi * tinggi)
+                sts = if (calculate < 18.5) {
+                    "Berat Badan Kurang (Underweight)"
+                } else if (calculate < 22.9) {
+                    "Berat Badan Normal"
+                } else if (calculate < 24.9) {
+                    "Berat Badan Berlebih (Overweight)"
+                } else if (calculate < 29.9) {
+                    "Obesitas I"
+                } else {
+                    "Obesitas II"
+                }
+
+                tvResult.text = "BMI $sts"
+
             }
-            binding.resultText.text = "BMI: $bmiResult\nCategory: $bmiCategory"
-        } else {
-            binding.resultText.text = "Invalid Input"
+
         }
-    }*/
+    }
 }

@@ -1,5 +1,6 @@
 package com.example.tubes.ui.askica
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.tubes.data.ChatData
@@ -59,6 +60,31 @@ class AskIcaActivity : AppCompatActivity() {
         val call = openAIAPI.getChatResponse(apiKey, chatInput)
         call.enqueue(object : Callback<ChatResponse> {
             override fun onResponse(call: Call<ChatResponse>, response: Response<ChatResponse>) {
+                if (response.isSuccessful) {
+                    val botReply = response.body()?.choices?.get(0)?.message ?: "No response"
+                    val botMessage = Pair("Bot", botReply)
+                    runOnUiThread {
+                        chatList.add(botMessage)
+                        chatAdapter.notifyItemInserted(chatList.size - 1)
+                        binding.rvBot.scrollToPosition(chatList.size - 1)
+                    }
+                } else {
+                    // Log the error response
+                    Log.e("OpenAIAPI", "Error response: ${response.code()} ${response.message()}")
+                }
+            }
+
+            override fun onFailure(call: Call<ChatResponse>, t: Throwable) {
+                try {
+                    // Log the failure
+                    Log.e("OpenAIAPI", "API call failed: ${t.message}")
+                    t.printStackTrace()
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            }
+
+            /*override fun onResponse(call: Call<ChatResponse>, response: Response<ChatResponse>) {
                 val botReply = response.body()?.choices?.get(0)?.message ?: "No response"
                 val botMessage = Pair("Bot", botReply)
                 runOnUiThread {
@@ -67,10 +93,16 @@ class AskIcaActivity : AppCompatActivity() {
                     binding.rvBot.scrollToPosition(chatList.size - 1)
                 }
             }
-
             override fun onFailure(call: Call<ChatResponse>, t: Throwable) {
-                t.printStackTrace()
+                try {
+                    t.printStackTrace()
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
             }
+
+             */
+
         })
     }
 }
