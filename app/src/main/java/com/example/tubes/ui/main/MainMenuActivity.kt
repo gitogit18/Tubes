@@ -10,6 +10,7 @@ import com.example.tubes.databinding.ActivityMainMenuBinding
 import com.example.tubes.ui.askica.AskIcaActivity
 import com.example.tubes.ui.bmicalculator.BMICalculatorActivity
 import com.example.tubes.ui.healtharticle.HealthArticleActivity
+import com.example.tubes.ui.notessqlite.NoteActivity
 
 class MainMenuActivity : AppCompatActivity() {
 
@@ -31,6 +32,10 @@ class MainMenuActivity : AppCompatActivity() {
             }
             imgAskIca.setOnClickListener {
                 val intent = Intent(this@MainMenuActivity, AskIcaActivity::class.java)
+                startActivity(intent)
+            }
+            imgEmotionBook.setOnClickListener {
+                val intent = Intent(this@MainMenuActivity, NoteActivity::class.java)
                 startActivity(intent)
             }
         }

@@ -27,6 +27,14 @@
             android:name=".ui.main.MainMenuActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.notessqlite.UpdateNoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.notessqlite.AddNoteActivity"
+            android:exported="false" />
+        <activity android:name=".ui.notessqlite.NoteActivity"
+            android:exported="false"/>
+        <activity
             android:name=".ui.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
